@@ -1,0 +1,71 @@
+body{
+  box-sizing: border-box;
+  background: #f2f2f2;
+}
+/*Make images resposive*/
+img{
+  max-width: 100%;
+}
+.post{
+  margin-bottom: 1rem;
+}
+h2{
+  /*flex shorthand: flex-grow, flex-shrink. flex-basis*/
+  flex: 0 1 100%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+h3{
+  font-family: 'Libre Baskerville', serif;
+  margin: 0;
+  font-weight: 700;
+}
+.container{
+ max-width: 1100px;
+ margin: 0 auto;
+}
+.content{
+  background: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+.content span {
+  color: #db008d;
+}
+.content h3{
+  font-size: .9rem;
+  line-height: 1.4rem;
+}
+.btn {
+  background-color: #008fd1;
+  color: #ffffff;
+  padding: .6rem 0;
+  display: block;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+/*MOBILE FIRST*/
+
+/*For medium decives show 2 cards per row*/
+@media screen and (min-width: 480px){
+  .main-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .post{
+    /*flex shorthand: flex-grow, flex-shrink. flex-basis*/
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+/*For big decives show 3 cards per row*/
+@media screen and (min-width: 768px){
+  .post{
+    /*flex shorthand: flex-grow, flex-shrink. flex-basis*/
+    flex: 0 1 calc(33% - 1rem);
+  }
+}
+/*And for small devices we don´t need a new style
+because it uses the default, meaning: what is set
+without the media queries*/
